@@ -25,5 +25,5 @@ removeAds();
 
 setInterval(function () {
     removeAds();
-}, 100)
+}, 2000)
 
