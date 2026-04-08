@@ -1,23 +1,23 @@
-## AdBlocker extension for Linkedin
+# AdBlocker extension for Linkedin
 
 A lightweight Chrome extension that removes “Promoted” posts (ads) from your LinkedIn feed in real time.
 It runs automatically in the background and keeps your feed clean without affecting normal content.
 
-# Features
+## Features
 
 - Removes sponsored / promoted posts from LinkedIn
 - Runs automatically on page load
 - Continuously scans for new ads (works with infinite scroll)
 - Simple, minimal setup — no external dependencies
 
-# How It Works
+##  How It Works
 
 The extension injects a script into LinkedIn pages that:
 - Detects elements containing the text “Promoted”
 - Locates the parent post container
 - Hides the entire post from the feed
 
-# Setup Instructions
+##  Setup Instructions
 
 1. Download / Clone the Project
 `git clone https://github.com/aozzb/linkedin-ad-blocker`
