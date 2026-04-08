@@ -1,20 +1,32 @@
 {
-    "manifest_version": 3,
-    "name": "LinkedIn AdBlocker",
-    "description": "Blocking ads.",
-    "version": "0.0.1",
-    "author": "aozzb",
-    "browser_action": {
-        "default_title": "LinkedIn AdBlocker"
-    },
-    "permissions": [
-        "tabs",
-        "webNavigation",
-        "https://www.linkedin.com/"
-    ],
-    "background": {
-        "scripts": [
-            "extension.js"
-        ]
+  "manifest_version": 3,
+  "name": "LinkedIn AdBlocker",
+  "description": "Blocking ads.",
+  "version": "0.0.1",
+  "author": "aozzb",
+
+  "action": {
+    "default_title": "LinkedIn AdBlocker"
+  },
+
+  "permissions": [
+    "tabs",
+    "webNavigation",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "https://www.linkedin.com/*"
+  ],
+
+  "background": {
+    "service_worker": "extension.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["linkedin.js"]
     }
+  ]
 }
